@@ -1,6 +1,7 @@
 import re
 import mysql.connector
 
+# This code is authored by Kyle Shanahan
 # This python script analuzes URLs in a text file and insert them into a "MySQL" database
 # In the comments below are the syntax used in this script and an explanation on how to utilize it individually.
 
