@@ -2,6 +2,11 @@ import random
 
 # This code was authored by: Kyle Shanahan
 # The following python script prompts the user four questions and then determines their pokemon pick.
+# There are four questions asked to the user:
+# 1) What is your favorite color? 
+# 2) What is your favorite food?
+# 3) Do you prefer big or small things?
+# 4) Do you consider yourself more pretty or fierce? 
 
 def choose_pokemon(color, food, size, personality):
     # Dictionary mapping possible answers to Pokémon
