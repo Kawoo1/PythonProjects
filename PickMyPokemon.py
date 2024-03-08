@@ -192,10 +192,29 @@ def choose_pokemon(color, food, size, personality):
 
 def main():
     print("Welcome to the Pokémon selector!")
-    color = input("What is your favorite color? ")
-    food = input("What is your favorite food? ")
-    size = input("Do you prefer big or small things? ")
-    personality = input("Do you consider yourself more pretty or fierce? ")
+    color = input("What is your favorite color? ").lower()
+    while not re.match("^[a-zA-Z]+$", color):
+        print("Please enter only letters.")
+        color = input("What is your favorite color? ").lower()
+
+    food = input("What is your favorite food? ").lower()
+    while not re.match("^[a-zA-Z]+$", food):
+        print("Please enter only letters.")
+        food = input("What is your favorite food? ").lower()
+
+    size = input("Do you prefer big or small things? ").lower()
+    while not re.match("^[a-zA-Z]+$", size):
+        print("Please enter only letters.")
+        size = input("Do you prefer big or small things? ").lower()
+
+    personality = input("Do you consider yourself more pretty or fierce? ").lower()
+    while not re.match("^[a-zA-Z]+$", personality):
+        print("Please enter only letters.")
+        personality = input("Do you consider yourself more pretty or fierce? ").lower()
+
+    # Output the chosen Pokémon
+    pokemon = choose_pokemon(color, food, size, personality)
+    print("Based on your answers, your Pokémon is:", pokemon)
 
     # Output the chosen Pokémon
     pokemon = choose_pokemon(color, food, size, personality)
